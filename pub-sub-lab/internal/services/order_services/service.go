@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/TheAmgadX/backend-labs/pub-sub-lab/broker"
-	"github.com/TheAmgadX/backend-labs/pub-sub-lab/models"
+	"github.com/TheAmgadX/backend-labs/pub-sub-lab/internal/broker"
+	"github.com/TheAmgadX/backend-labs/pub-sub-lab/internal/models"
 )
 
 type Service interface {

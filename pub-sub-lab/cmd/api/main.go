@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/TheAmgadX/backend-labs/pub-sub-lab/broker"
-	"github.com/TheAmgadX/backend-labs/pub-sub-lab/services"
+	"github.com/TheAmgadX/backend-labs/pub-sub-lab/internal/broker"
+	services "github.com/TheAmgadX/backend-labs/pub-sub-lab/internal/services/order_services"
 	"github.com/joho/godotenv"
 )
 

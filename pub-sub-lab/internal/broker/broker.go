@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/TheAmgadX/backend-labs/pub-sub-lab/models"
+	"github.com/TheAmgadX/backend-labs/pub-sub-lab/internal/models"
 )
 
 type Subscriber chan models.Order
@@ -52,8 +52,8 @@ func (b *Broker) Subscribe(topic string) Subscriber {
 }
 
 func (b *Broker) Publish(topic string, order models.Order) {
-	b.mux.Lock()
-	defer b.mux.Unlock()
+	b.mux.RLock()
+	defer b.mux.RUnlock()
 
 	for _, ch := range b.subscribers[topic] {
 		go func(channel chan models.Order) {
